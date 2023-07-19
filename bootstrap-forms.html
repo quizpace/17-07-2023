@@ -18,30 +18,36 @@
 </head>
 
 <body>
-<form action="" class="main-form">
+<form action="." class="form-group">
     
  <div class="form-group">
         <h1><br />Creat an account</h1>
         <br />
     </div>
 
- <div class="form-group">
-     <label for="firstname">First name</label>
-<input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name" required>
+ <div class="was-validated">
+     <label for="firstname" class="form-label">First name</label>
+<input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name" minlength="2" required>
+<div class="valid-feedback">Looks good!.</div>
+<div class="invalid-feedback">Please fill out this field.</div>
 <br />
 </div> 
+</div>
 
-<div class="form-group">
-<label for="lastname">Last name</label>
-<input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last name" required>
+<div class="was-validated">
+<label for="lastname" class="form-label">Last name</label>
+<input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last name" minlength="2" required>
+<div class="valid-feedback">Looks good!.</div>
+<div class="invalid-feedback">Please fill out this field.</div>
 <br />
+</div>
 </div>
 
 <div class="form-group">
-    <label for="radio-options">How do you know about us?</label>
+    <label for="radio-options" class="form-label">How do you know about us?</label>
 <div class="form-check">
     <br />
-    <input class="form-check-input" type="radio" name="FRIEND" id="FRIEND">
+    <input class="form-check-input" type="radio" name="rad" id="FRIEND">
     <label class="form-check-label" for="FRIEND">
       FRIEND
     </label>
@@ -49,7 +55,7 @@
 </div>
 <div class="form-group">
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="FACEBOOK" id="FACEBOOK">
+        <input class="form-check-input" type="radio" name="rad" id="FACEBOOK">
         <label class="form-check-label" for="FACEBOOK">
           FACEBOOK
         </label>
@@ -57,21 +63,23 @@
     </div>
     <div class="form-group">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="OTHER" id="OTHER">
+            <input class="form-check-input" type="radio" name="rad" id="OTHER">
             <label class="form-check-label" for="OTHER">
               OTHER
             </label>
           </div>
         </div>
 <br />
-        <div class="form-group">
-            <label for="password">Creat a password</label>
-            <input type="text" name="password" id="password" class="form-control" required>
+        <div class="was-validated">
+            <label for="password" class="form-label">Creat a password</label>
+            <input type="text" name="password" id="password" class="form-control" minlength="8" required>
             <small id="mustpass" class="form-text text-muted">Must be 8-20 characters long.</small>
+            <div class="valid-feedback">Looks good!.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>  
             <br /><br />
         </div>
 
-        <div class="form-group">
+        <div class="was-validated">
         <label for="pass-quest">Choose a question to reset your password</label>
         <select  text="question" id="question" class="form-control" required>
         <option selected class="form-text text-muted" value="" disabled>Choose a question</option> 
@@ -82,20 +90,23 @@
         <br />
         </div>
 
-        <div class="form-group">
-            <label for="Response">Response</label>
-            <input type="text" name="response" id="response" class="form-control" placeholder="Response" required>
+        <div class="was-validated">
+            <label for="Response" class="form-label">Response</label>
+            <input type="text" name="response" id="response" class="form-control" placeholder="Response" minlength="2" required>
+            <div class="invalid-feedback">Please fill out this field.</div>  
             <br />
             </div>
 
-            <div class="form-group">
-                <label for="email">Email address</label>
+            <div class="was-validated">
+                <label for="email" class="form-label">Email address</label>
                 <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" required>
                 <small id="noshare-email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div class="valid-feedback">Looks good!.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>  
                 <br /><br />
                 </div>
 
-                <div class="form-group">
+                <div class="was-validated">
                         <div class="custom-file">
                           <input type="file" class="form-control" id="inputGroupFile" required>
                           <label class="custom-file" for="inputGroupFile"></label>
@@ -103,9 +114,10 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="was-validated">
                 <input type="checkbox" required>
                 <label for="accept-terms">I agree to the policy</label>
+                <div class="invalid-feedback">Check this checkbox to continue.</div>
                 <br />
                 <input type="checkbox">
                 <label for="send-news">Send me all the news</label>
@@ -117,5 +129,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           
+            
 </form>
     </body>
